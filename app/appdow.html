@@ -148,9 +148,13 @@ a{
     var ua = navigator.userAgent.toLowerCase();
 var isWeixin = ua.indexOf('micromessenger') != -1;
 if (isWeixin) {
-    $("#weixinTip").show;
+    // console.log(" 是来自微信内置浏览器");
+    document.getElementById("weixinTip").style.display="block"
+    // $("#weixinTip").show;
 }else{
-    $("#weixinTip").hide;
+    // console.log(" 是来");
+    // $("#weixinTip").hide();
+    document.getElementById("weixinTip").style.display="none"
 }
 function copyContent(){ 
     var copyobject=document.getElementById("copy-content");
