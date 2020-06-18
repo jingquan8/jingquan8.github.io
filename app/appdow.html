@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>所有视频《免费看》无广告</title>
+<script type="text/javascript" src="../statics/jquery/1.11.3/jquery.min.js"></script>
+
+</head>
+<style>
+body{
+    font-size: 14px;
+    font-family: "Source Han Sans","Microsoft YaHei", "微软雅黑", "PingFang SC", Arial;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: #087cbc;
+}
+.dowmain{
+    width:100%;
+    max-width: 750px;
+    height: 100%;
+    position:absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    background: url(images/webbg.jpg) no-repeat top;
+    background-size: cover;
+}
+.dowmain .icon{
+    width: 80px;
+    height: 80px;
+    background: url(images/ico.png) no-repeat center;
+    background-size: 100%;
+    margin: auto;
+    margin-top: 50%;
+}
+.dowmain .dowbox{
+    margin-top: 20px;
+}
+.dowmain .dowbox a{
+    display: block;
+    margin: auto;
+    height: 40px;
+    width: 150px;
+    background: #fff;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    line-height: 40px;
+    padding-left: 45px;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-decoration: none;
+}
+.dowmain .dowbox a i{
+    display: block;
+    height: 30px;
+    width: 30px;
+    position:absolute;
+    left: 5px;
+    top: 5px;
+}
+.dowmain .dowbox a.android i{
+    background: url(images/Android2.png) no-repeat center;
+    background-size: 100%;
+}
+.dowmain .dowbox a.iphone i{
+    background: url(images/ios.png) no-repeat center;
+    background-size: 100%;
+}
+.webapp{
+    color: #fff;
+    text-decoration: underline;
+    text-align: center;
+    display: block;
+}
+#weixinTip{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    background-size: contain;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 30%;
+    font-size: 16px;
+    color: #fff;
+    background:rgba(0,0,0,0.8);
+}
+
+#weixinTip .wxtext{
+    position: absolute;
+    text-align: left;
+    top: 5%;
+    left: 5%;
+    font-weight: bold;
+    line-height: 30px;
+}
+#weixinTip .wxtext img{
+    width: 30px;
+}
+#weixinTip .wxicon{
+    position: absolute;
+    top: 0%;
+    right: 10px;
+    width: 20%;
+}
+#weixinTip p{
+    text-align: center;
+    margin-top: 5%;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+#weixinTip button{
+    border: 1px solid #49a274;
+    background: #fff;
+    color: #49a274;
+    border-radius: 20px;
+    width: 40%;
+    height: 40px;
+    margin-top: 10%;
+}
+
+</style>
+<body>
+    <div class="dowmain">
+        <div class="icon"></div>
+        <div class="dowbox">
+            <a class="android" href="https://www.pgyer.com/MbQH"><i></i>Android下载</a>
+            <a style="padding: 0; text-align: center;">下载密码：123</a>
+            <!-- <a class="iphone" href="https://xz.cn.zmkj.net/ios/mjy/"><i></i>iphone 下载</a> -->
+        </div>
+        <a class="webapp" href="https://www.meijuying.com/">点击手机浏览器直接观看 &gt;&gt;</a>
+    </div>
+    <div id="weixinTip"><input type="text" style="position:fixed;top:-99999px" value="https://www.meijuying.com" id="copy-content"/><div class="wxtext">点击右上角的 <em><img src="https://www.meijuying.com/statics/youku_m/images/weixintu1.png"></em> 按钮<br>选择浏览器打开 ~~ 继续观看视频！</div><img class="wxicon" src="https://www.meijuying.com/statics/youku_m/images/weixintu2.png"><p>1、防止腾讯屏蔽本站链接</p><p>2、建议用手机自带浏览器或UC浏览器</p><button class="copy-button" type="button" onclick="copyContent();"> 点此复制本站地址 </button></div>
+</body>
+
+<script>
+    var ua = navigator.userAgent.toLowerCase();
+var isWeixin = ua.indexOf('micromessenger') != -1;
+if (isWeixin) {
+    $("#weixinTip").show;
+}else{
+    $("#weixinTip").hide;
+}
+function copyContent(){ 
+    var copyobject=document.getElementById("copy-content");
+    copyobject.select();
+    document.execCommand("Copy");
+    alert("已复制成功哦~"); 
+};
+</script>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>美剧鹰</title>
+    
+<script type="text/javascript" src="../statics/jquery/1.11.3/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!-- <div id="androidCod" style="display:none">
+        <script language="javascript" type="text/javascript">
+            window.location.href = "https://www.pgyer.com/ToWm";
+        </script>
+    </div>
+    <div id="iosCod" style="display:none">
+        <script language="javascript" type="text/javascript">
+            window.location.href = "https://xz.cn.zmkj.net/ios/mjy/";
+        </script>
+    </div> -->
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function () {
+            if (/android/i.test(navigator.userAgent)) {
+                window.location.href = "https://www.pgyer.com/ToWm";
+            }
+            if (/ipad|iphone|mac/i.test(navigator.userAgent)) {
+                window.location.href = "https://xz.cn.zmkj.net/ios/mjy/";
+            }
+        });
+    </script>
+</body>
+
+
+</html>
